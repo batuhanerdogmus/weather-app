@@ -1,0 +1,111 @@
+@import "_mediaQueries";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // touch-action: pan-y;
+}
+html {
+  font-size: 100%;
+  @include responsive(desktop) {
+    font-size: 87.5%;
+  }
+  @include responsive(tablet) {
+    font-size: 75%;
+  }
+  @include responsive(phone) {
+    font-size: 64%;
+  }
+  @include responsive(large-screen) {
+    font-size: 115%;
+  }
+}
+.App {
+  background-color: #222;
+  align-items: center;
+  min-height: 100vh;
+  .weather-container {
+    background-color: rgb(82, 82, 82);
+    min-height: 60vh;
+    overflow: hidden;
+  }
+  .container {
+    @include responsive(desktop) {
+      min-width: 80vw;
+    }
+    @include responsive(tablet) {
+      min-width: 90vw;
+    }
+    @include responsive(phone) {
+      min-width: 100vw;
+    }
+    @include responsive(large-screen) {
+      min-width: 50vw;
+    }
+  }
+  input {
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.4rem;
+    padding: 0 2.5rem;
+    letter-spacing: 1px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    &:focus {
+      outline: none;
+      border: 1px white solid;
+    }
+  }
+  .current-temp {
+    // img {
+    //   width: 10%;
+    // }
+    h2 {
+      font-size: 3rem;
+    }
+    .tempbutton {
+      div {
+        display: inline-block;
+        height: 1.2rem;
+        width: 3px;
+        background-color: white;
+        margin: 0 0.5rem;
+      }
+      span {
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+  .hourly {
+    li {
+      margin: 1rem;
+    }
+    .slider {
+      margin-bottom: 2rem;
+    }
+    .slider-control-bottomcenter {
+      top: 110%;
+    }
+  }
+}
+
+.forecast div {
+  width: 10em;
+  @include responsive(phone) {
+    min-width: 100%;
+  }
+}
+.suggestion-container1 {
+  width: 50%;
+  margin: 2em 0;
+}
+.suggestion-container {
+  z-index: 100;
+  border-radius: 10px;
+  background-color: #707070;
+}
