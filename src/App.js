@@ -56,7 +56,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${APP_KEY}&q=${coordinates.lat},${coordinates.lng}&days=3`
+        `https://api.weatherapi.com/v1/forecast.json?key=${APP_KEY}&q=${coordinates.lat},${coordinates.lng}&days=3`
       )
       .then((data) => {
         setWeather(data.data);
@@ -105,11 +105,7 @@ function App() {
     }
     if (data.includes("tornado")) {
       return tornado;
-    } else return console.log(data);
-  }
-
-  {
-    console.log(themeType());
+    } else return undefined;
   }
 
   return (
