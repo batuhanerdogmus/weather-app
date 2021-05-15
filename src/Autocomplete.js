@@ -49,6 +49,7 @@ function Autocomplete({ address, setAddress, setCoordinates }) {
                   };
               return (
                 <div
+                  key={suggestion.placeId}
                   className="suggestion-container2"
                   {...getSuggestionItemProps(suggestion, {
                     style,

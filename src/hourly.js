@@ -37,7 +37,7 @@ const Hourly = ({ weather, temp, showDay }) => {
             className={data.date + " row w-100"}
             style={showDay !== forecastDay ? inputStyle : {}}
           >
-            <div className="container ">
+            <div className="container p-0 ">
               <Carousel {...settings}>
                 {data.hour.map((hour) => {
                   if (

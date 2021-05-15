@@ -17,9 +17,9 @@ const CurrentWeather = ({
           {weather.location.name}, {weather.location.region},{""}
           {weather.location.country}
         </h3>
-        <div className="heart d-inline-block float-right">
+        {/* <div className="heart d-inline-block float-right">
           <img src={heart} alt="heart" />
-        </div>
+        </div> */}
         <h4>
           {days[currentDateTime]}, {weather.location.localtime}
         </h4>

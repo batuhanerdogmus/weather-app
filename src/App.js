@@ -120,32 +120,30 @@ function App() {
 
       {weather ? (
         <div
-          className="container justify-content-center text-light p-4  weather-container"
+          className="container justify-content-center text-light pt-4  weather-container"
           style={{
             backgroundImage: "url(" + `${themeType()}` + ")",
             backgroundSize: "cover",
           }}
         >
-          <div className="ml-5">
-            <CurrentWeather
-              weather={weather}
-              days={days}
-              temp={temp}
-              currentDateTime={currentDateTime}
-              tempCelcius={tempCelcius}
-              tempFahrenheit={tempFahrenheit}
-            />
+          <CurrentWeather
+            weather={weather}
+            days={days}
+            temp={temp}
+            currentDateTime={currentDateTime}
+            tempCelcius={tempCelcius}
+            tempFahrenheit={tempFahrenheit}
+          />
 
-            <Hourly weather={weather} temp={temp} showDay={showDay} />
+          <Hourly weather={weather} temp={temp} showDay={showDay} />
 
-            <Forecast
-              weather={weather}
-              days={days}
-              temp={temp}
-              setShowDay={setShowDay}
-              showDay={showDay}
-            />
-          </div>
+          <Forecast
+            weather={weather}
+            days={days}
+            temp={temp}
+            setShowDay={setShowDay}
+            showDay={showDay}
+          />
         </div>
       ) : (
         "We are fetching the data"
